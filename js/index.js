@@ -181,9 +181,9 @@ let messageRender = (function ($) {
     }
 })(Zepto);
 
-//$(document).on('touchstart touchmove touchend', function (e) {
-//    e.preventDefault();
-//});
+$(document).on('touchstart touchmove touchend', function (e) {
+    e.preventDefault();
+});
 
 let cubeRender = (function ($) {
     // 只要在移动端浏览器中实现滑动操作，都需要把浏览器默认的滑动行为禁止掉
