@@ -1,184 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+<head lang="en">
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>H5创意交互建立开发</title>
-    <!--dev-->
-    <!--<link rel="stylesheet/less" href="css/index.less">-->
-    <!--<script src="js/less-2.5.3.min.js"></script>-->
-    <link rel="stylesheet" href="css/index.min.css">
-    <script>
-        (function () {
-            let computed = function () {
-                let desW = 640; //设计稿宽度
-                let devW = document.documentElement.clientWidth; // 设备宽度
-                if (devW >= 640) return;
-                document.documentElement.style.fontSize = devW / desW * 100 + 'px';
-            };
-            computed();
-            window.addEventListener('resize', computed, false);
-        })();
-    </script>
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="css/reset.min.css"/>
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
 </head>
+<script>
+    /*移动适配*/
+    var desW=640;/*设计稿的宽度*/
+    var winW=document.documentElement.clientWidth;/*设备的宽度*/
+    document.documentElement.style.fontSize=winW/desW*100+'px';/*各个设备的根元素
+    字体大小*/
+</script>
 <body>
+<section class="main">
+    <section class="music">
+        <audio src="audio/zxc.mp3" preload="auto" id="beyond"></audio>
 
-<main class="mainBox">
-    <!--loading-->
-    <section class="loadingBox">
-        <div class="title">
-            <h1>杨波</h1>
-            <h2>H5场景交互型建立</h2>
-        </div>
-        <div class="progress">
-            <div class="doing"></div>
-        </div>
     </section>
-    <!--phone-->
-    <section class="phoneBox">
-        <div class="header">
-            <img src="img/zf_phoneLogo.png" alt="珠峰培训" class="logo">
-            <span class="time">00:00</span>
-        </div>
-
-        <div class="listen">
-            <div class="move"></div>
-            <a href="javascript:;" class="touch"></a>
-        </div>
-        <div class="detail">
-            <a href="javascript:;" class="touch"></a>
-        </div>
-
-        <audio src="audio/bell.mp3" loop preload="none" id="audioBell"></audio>
-        <audio src="audio/say.mp3" preload="none" id="audioSay"></audio>
-    </section>
-    <!--message-->
-    <section class="messageBox">
-        <ul class="talkBox clearfix">
-            <li class="student">
-                <img src="img/zf_messageStudent.png" alt="">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide1">
+                <img src="img/cicle.png" alt=""/>
+                <span>My Resume</span>
+                <span>我的简历</span>
+                <img src="img/line.jpg" alt=""/>
+                <span>【路漫漫其修远兮，吾将上下而求索】</span>
+                <span>name：杨波</span>
+                <span>Tel：15134578149</span>
+                <span>【或许我就是你需要的人】</span>
                 <i></i>
-                帝高阳之苗裔兮，朕皇考曰伯庸。
-            </li>
-            <li class="teacher">
-                <img src="img/zf_messageLogo.png" alt="">
-                <i></i>
-                摄提贞于孟陬兮，惟庚寅吾以降。
-            </li>
-            <li class="teacher">
-                <img src="img/zf_messageLogo.png" alt="">
-                <i></i>
-                继续往下说！
-            </li>
-            <li class="student">
-                <img src="img/zf_messageStudent.png" alt="">
-                <i></i>
-                皇览揆余初度兮，肇锡余以嘉名。
-            </li>
-            <li class="teacher">
-                <img src="img/zf_messageLogo.png" alt="">
-                <i></i>
-                名余曰正则兮，字余曰灵均。
-            </li>
-            <li class="student">
-                <img src="img/zf_messageStudent.png" alt="">
-                <i></i>
-                纷吾既有此内美兮，又重之以修能。。
-            </li>
-            <li class="teacher">
-                <img src="img/zf_messageLogo.png" alt="">
-                <i></i>
-                扈江离与辟芷兮，纫秋兰以为佩。
-            </li>
-            <li class="student">
-                <img src="img/zf_messageStudent.png" alt="">
-                <i></i>
-                汨余若将不及兮，恐年岁之不吾与。
-            </li>
-            <li class="teacher">
-                <img src="img/zf_messageLogo.png" alt="">
-                <i></i>
-                朝搴阰之木兰兮，夕揽洲之宿莽。
-            </li>
-        </ul>
-        <div class="keyBord">
-            <span>名余曰正则兮，字余曰灵均。</span>
-            <a href="javascript:;" class="submit"></a>
-        </div>
-        <audio src="audio/music.mp3" loop preload="none" id="musicAudio"></audio>
-    </section>
-    <!--cube-->
-    <section class="cubeBox">
-        <ul class="box">
-            <li><img src="img/zf_cube1.png" alt=""></li>
-            <li><img src="img/zf_cube2.png" alt=""></li>
-            <li><img src="img/zf_cube3.png" alt=""></li>
-            <li><img src="img/zf_cube4.png" alt=""></li>
-            <li><img src="img/zf_cube5.png" alt=""></li>
-            <li><img src="img/zf_cube6.png" alt=""></li>
-        </ul>
-        <img src="img/zf_cubeTip.png" alt="" class="tip">
-    </section>
-    <!--detail-->
-    <section class="detailBox">
-        <a href="javascript:;" class="returnLink"></a>
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide page1">
-                    <dl id="makisuBox">
-                        <dt>自我介绍</dt>
-                        <dd><i>01</i>
-                            <p>姓名：杨波</p></dd>
-                        <dd><i>02</i>
-                            <p>性别：男</p></dd>
-                        <dd><i>03</i>
-                            <p>年龄：29</p></dd>
-                        <dd><i>04</i>
-                            <p>学历：大专</p></dd>
-                        <dd><i>05</i>
-                            <p>工作经验：三年</p></dd>
-                        <dd><i>06</i>
-                            <p>户籍：黑龙江省哈尔滨市</p></dd>
-                        <dd><i>07</i>
-                            <p>邮箱：1043951234@qq.com</p></dd>
-                        <dd><i>08</i>
-                            <p>手机号：15134578149</p></dd>
-                        <dd><i>09</i>
-                            <p>座右铭：好死不如赖活着</p></dd>
-                    </dl>
+            </div>
+            <div class="swiper-slide slide2">
+                <img src="img/left.jpg" alt=""/>
+                <img src="img/right.jpg" alt=""/>
+                <img src="img/line-bottom.jpg" alt=""/>
+                <img src="img/line-bottom.jpg" alt=""/>
+                <span>Personal information</span>
+                <span>个人信息</span>
+                <div>
+                    <p>姓名：杨波</p>
+                    <p>年龄：30</p>
+                    <p>性别：男</p>
+                    <p>爱好：看书，运动</p>
+                    <p>学历：大专</p>
                 </div>
-                <div class="swiper-slide page2">
-                    <h2>专业技能</h2>
-                    <img src="img/zf_course.png" alt="">
-                    <img src="img/zf_course1.png" alt="">
-                    <img src="img/zf_course2.png" alt="">
-                    <img src="img/zf_course3.png" alt="">
-                    <img src="img/zf_course4.png" alt="">
-                    <img src="img/zf_course5.png" alt="">
-                    <img src="img/zf_course6.png" alt="">
-                </div>
-                <div class="swiper-slide page3">
-
-                </div>
-                <div class="swiper-slide page4">
-
-                </div>
-                <div class="swiper-slide page5">
-
-                </div>
-                <div class="swiper-slide page6">
-
-                </div>
+                <img src="img/head.jpg" alt=""/>
+                <span>自<br/>我<br/>评<br/>价<br/></span>
+                <img src="img/conent.jpg" alt=""/>
+                <span>乐于助人, <br/>乐观积极， <br/> 有团体意识， <br/> 有责任感， <br/>有上进心</span>
+                <i></i>
+            </div>
+            <div class="swiper-slide slide3">
+                <img src="img/spray.png" alt=""/>
+                <span>Professionnal skill</span>
+                <span>专业技能</span>
+                <img src="img/line1.jpg" alt=""/>
+                <span>HTML5/CSS3</span>
+                <span>JS</span>
+                <span>REACT</span>
+                <span>VUE</span>
+                <span>NODE</span>
+                <span>JQUERY/AJAX</span>
+                <img src="img/progress1.jpg" alt=""/>
+                <img src="img/progress2.jpg" alt=""/>
+                <img src="img/progress3.jpg" alt=""/>
+                <img src="img/progress3.jpg" alt=""/>
+                <img src="img/progress4.jpg" alt=""/>
+                <img src="img/progress2.jpg" alt=""/>
+                <i></i>
+            </div>
+            <div class="swiper-slide slide4">
+                <img src="img/flower-bottom.jpg" alt=""/>
+                <span>My works</span>
+                <span>我的作品</span>
+                <img src="img/item.jpg" alt=""/>
+                <img src="img/music.png" alt=""/>
+                <img src="img/music.png" alt=""/>
+                <img src="img/music.png" alt=""/>
+                <img src="img/music.png" alt=""/>
+                <i></i>
+            </div>
+            <div class="swiper-slide slide5">
+                <img src="img/decorate.png" alt=""/>
+                <span>Contact information</span>
+                <span>联系方式</span>
+                <img src="img/border.jpg" alt=""/>
+                <img src="img/erweima.jpg" alt=""/>
+                <span>手机：15134578149</span>
+                <span>qq：1043951234</span>
+                <span>很期待加入你们！</span>
+                <img src="img/decorate-b.png" alt=""/>
+                <i></i>
             </div>
         </div>
-    </section>
-</main>
-
-<script src="js/zepto.min.js"></script>
-<script src="js/swiper.min.js"></script>
-<script src="js/makisu.min.js"></script>
-<script src="js/prefixfree.min.js"></script>
-<script src="js/index.js"></script>
+    </div>
+</section>
 </body>
 </html>
+<script src="js/swiper.min.js"></script>
+<script>
+    var mySwiper=new Swiper(".swiper-container",{
+        direction:"vertical",
+        loop:true,
+        onTransitionEnd:function(swiper){
+            var curIndex=swiper.activeIndex;
+            var slides=swiper.slides;
+            [].forEach.call(slides,function(item,index){
+                item.id="";
+                if(index==curIndex){
+                    switch (index){
+                        case 0:
+                            item.id="page"+(slides.length-2);
+                            break;
+                        case slides.length-1:
+                            item.id="page1";
+                            break;
+                        default :
+                            item.id="page"+index
+                    }
+                }
+            })
+        }
+    });
+
+    var music=document.querySelector(".music");
+    var beyond=document.querySelector("#beyond");
+    window.setTimeout(function(){
+        beyond.play();
+        music.style.opacity=1;
+        music.className='music musicMove'
+    },1000);
+    music.addEventListener("click",function(){
+        if(beyond.paused){
+            beyond.play();
+            music.className='music musicMove'
+        }else{
+            beyond.pause();
+            music.className='music'
+        }
+    },false)
+</script>
